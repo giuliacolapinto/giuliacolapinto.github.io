@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+  <html lang="en">
+    <head>
+    <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Giulia Colapinto | Portfolio</title>
+        <style>
+        :root {
+          --primary-color: #4a235a;
+            --accent-color: #8e44ad;
+            --text-color: #333;
+            --light-bg: #f4f7f6;
+            --border-color: #ecf0f1;
+        }
+      
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      }
+      
+      body {
+        background-color: var(--light-bg);
+        color: var(--text-color);
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+      }
+      
+      .container {
+        max-width: 1100px;
+        margin: 0 auto;
+        background: #fff;
+          display: flex;
+        flex-direction: column;
+      }
+      
+      /* Effetto di comparsa lenta (2.5 secondi) */
+        /* Inizialmente visibile, l'opacità 0 viene data via JS solo se supportato */
+        .reveal {
+            transition: opacity 2.5s ease-out, transform 2.5s ease-out;
+            will-change: opacity, transform;
+        }
+
+        .reveal.is-hidden {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Sidebar / Header */
+        aside {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 2.5rem 1.5rem;
+            z-index: 10;
+        }
+
+        aside h1 { font-size: 2.2rem; margin-bottom: 0.5rem; }
+        aside h2 { font-size: 1.1rem; color: #d2b4de; margin-bottom: 2rem; font-weight: 400; }
+        aside h3 { 
+            font-size: 1.1rem; 
+            border-bottom: 1px solid rgba(255,255,255,0.2); 
+            padding-bottom: 0.5rem; 
+            margin: 1.5rem 0 1rem; 
+        }
+
+        .contact-info { list-style: none; font-size: 0.95rem; }
+        .contact-info li { margin-bottom: 0.8rem; word-break: break-all; }
+        .contact-info a { 
+            color: #ffffff !important; 
+            text-decoration: underline !important; 
+            text-underline-offset: 4px;
+        }
+
+        /* Skill Categories */
+        .skill-category { margin-bottom: 1.5rem; }
+        .skill-category h4 { 
+            font-size: 0.85rem; 
+            color: #d2b4de; 
+            margin-bottom: 0.6rem; 
+            text-transform: uppercase; 
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+        .skills-list { list-style: none; display: flex; flex-wrap: wrap; gap: 0.5rem; }
+        .skills-list li {
+            background: rgba(255,255,255,0.1);
+            padding: 0.35rem 0.7rem;
+            border-radius: 4px; font-size: 0.85rem;
+        }
+
+        /* Main Content */
+        main { 
+            padding: 2rem 1.5rem; 
+            background: #fff; 
+            min-height: 100vh;
+        }
+        section { margin-bottom: 4.5rem; }
+
+        main h2 {
+            color: var(--accent-color);
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.8rem;
+            font-size: 1.7rem;
+        }
+
+        .about-text {
+            font-size: 1.1rem;
+            background-color: #fcf9fd;
+            padding: 2rem;
+            border-left: 5px solid var(--accent-color);
+            border-radius: 4px;
+            line-height: 1.8;
+        }
+
+        /* Parole evidenziate richieste (Grassetto + Colore, NO sottolineatura) */
+        .highlight { 
+            font-weight: 700;
+            color: var(--accent-color);
+        }
+
+        .item { margin-bottom: 2.5rem; }
+        .item-header { margin-bottom: 0.5rem; }
+        .item-header h3 { color: var(--primary-color); font-size: 1.35rem; margin-bottom: 0.3rem; }
+        .date { font-size: 0.9rem; color: #7f8c8d; font-weight: 600; display: block; margin-bottom: 0.5rem; }
+        .subtitle { font-style: italic; color: #555; margin-bottom: 0.8rem; font-weight: 500; }
+        .description-list { padding-left: 1.2rem; margin-top: 0.8rem; list-style-type: disc; }
+        .description-list li { margin-bottom: 0.6rem; font-size: 1rem; }
+        
+        .project-link { 
+            display: inline-block; 
+            margin-top: 1rem; 
+            color: var(--accent-color); 
+            text-decoration: underline; 
+            font-weight: bold; 
+        }
+
+        @media (min-width: 992px) {
+            .container { flex-direction: row; margin: 3rem auto; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); overflow: hidden; }
+            aside { width: 350px; flex-shrink: 0; padding: 3rem; }
+            main { padding: 4rem; }
+            .item-header { display: flex; justify-content: space-between; align-items: baseline; }
+            .date { margin-bottom: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <aside>
+            <h1>Giulia Colapinto</h1>
+            <h2>BSc Student in Statistical and Economic Sciences</h2>
+            
+            <h3>Contact</h3>
+            <ul class="contact-info">
+                <li>📧 <a href="mailto:giulia.colapinto13@gmail.com">giulia.colapinto13@gmail.com</a></li>
+                <li>📱 (+39) 3347920006</li>
+                <li>📍 20138 Milan, Italy</li>
+                <li>🔗 <a href="https://linkedin.com/in/giulia-colapinto" target="_blank">LinkedIn</a></li>
+                <li>💻 <a href="https://github.com/giuliacolapinto" target="_blank">GitHub</a></li>
+            </ul>
+
+            <h3>Languages</h3>
+            <ul class="contact-info">
+                <li><strong>English</strong> - Fluent</li>
+                <li>IELTS Certification: Band 7, Level C1 (CEFR)</li>
+                <li><strong>Italian</strong> - Native/Bilingual</li>
+            </ul>
+
+            <h3>Technical Skills</h3>
+            <div class="skill-category">
+                <h4>Language & Core Tools</h4>
+                <ul class="skills-list">
+                    <li>Python</li><li>R</li><li>SAS</li><li>Stata</li><li>Gretl</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h4>Databases & Querying</h4>
+                <ul class="skills-list">
+                    <li>SQL (MySQL, SQLite)</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h4>Reporting & Visualisation</h4>
+                <ul class="skills-list">
+                    <li>Tableau</li><li>Quarto</li><li>R Markdown</li><li>LaTeX (Overleaf)</li><li>Git</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h4>Software & OS</h4>
+                <ul class="skills-list">
+                    <li>Windows</li><li>Microsoft Office</li>
+                </ul>
+            </div>
+        </aside>
+
+        <main>
+            <section class="reveal">
+                <h2>About Me</h2>
+                <div class="about-text">
+                    I am the union of two things: <span class="highlight">sports</span> and <span class="highlight">mathematics</span>. My father put me in the pool when I was just 3 months old, and I have practiced sports — ranging from swimming to weightlifting — my entire life. My passion for math, on the other hand, started at age 8 with <span class="highlight">Sudoku</span> puzzles, which I used to solve while watching TV because they relaxed me. The <span class="highlight">discipline</span> I learned from sports combined with my love for logic puzzles perfectly translates into my passion for <span class="highlight">statistics</span>: you keep banging your head against a problem until you find the best possible solution (or the best model!).
+                </div>
+            </section>
+
+            <section class="reveal">
+                <h2>Education</h2>
+                <div class="item">
+                    <div class="item-header">
+                        <h3>Bachelor's Degree in Statistical and Economic Sciences</h3>
+        <span class="date">Sep. 2023 - Jul. 2026</span>
+        </div>
+        <div class="subtitle">University of Milano-Bicocca | Milan, Italy</div>
+        <ul class="description-list">
+        <li><strong>Statistical Learning & Algorithms:</strong> Statistics (I, II, III), Data Mining, Computational Statistics, Multivariate Statistical Analysis.</li>
+        <li><strong>Data Infrastructure:</strong> Information Systems, Databases, Introduction to Computer Science, Programming Language Laboratory, Data Processing & Analysis.</li>
+        <li><strong>Mathematical Foundations:</strong> Calculus (I, II), Linear Algebra, Probability.</li>
+        <li><strong>Economics & Finance:</strong> Market Analysis, Corporate Finance, Economics Time Series Analysis, Econometrics.</li>
+        </ul>
+        </div>
+        <div class="item">
+        <div class="item-header">
+        <h3>High School Diploma</h3>
+        <span class="date">Sep. 2018 - Jul. 2023</span>
+        </div>
+        <div class="subtitle">State Scientific High School Donatelli | Milan, Italy</div>
+        </div>
+        </section>
+        
+        <section class="reveal">
+        <h2>Projects</h2>
+        <div class="item">
+        <div class="item-header"><h3>Rice Variety Classification</h3></div>
+        <div class="subtitle">Tools: R | R Markdown</div>
+        <p>A comparative data mining study on Rice Variety Classification using Logistic Regression and K-NN. This project includes data preprocessing, feature normalization, and performance evaluation attraverso ROC curves e F1-metrics.</p>
+        <a href="https://github.com/giuliacolapinto/DataMining_Rice_Analysis" class="project-link" target="_blank">View Project &rarr;</a>
+        </div>
+        
+        <div class="item">
+        <div class="item-header"><h3>Cranial Clusters</h3></div>
+        <div class="subtitle">Tools: R (tidyverse, Rmixmod, mclust, ggplot2, etc.)</div>
+        <p>Implemented Gaussian Mixture Models (GMM) to classify sexual dimorphism, leveraging PCA for feature selection and dimensionality reduction. Through V-Fold Cross-Validation, the system achieved 87% training accuracy, validated via Adjusted Rand Index (ARI).</p>
+        <a href="https://github.com/giuliacolapinto/CranialClusters" class="project-link" target="_blank">View Project &rarr;</a>
+        </div>
+        
+        <div class="item">
+        <div class="item-header"><h3>Labor Market Analytics</h3></div>
+        <div class="subtitle">Tools: Tableau | R</div>
+        <p>Performed a trend analysis of 2019–2023 Italian job ads using R and Tableau. Developed a pipeline to track ESCO skill shifts (digital/ transversal) and occupational growth, utilizing data joining and relevance metrics to identify key market drivers.</p>
+        <a href="https://github.com/giuliacolapinto/work_analysis" class="project-link" target="_blank">View Project &rarr;</a>
+        </div>
+        </section>
+        
+        <section class="reveal">
+        <h2>Awards & Certificates</h2>
+        <div class="item">
+        <div class="item-header">
+        <h3>Winner of Student Tech Class - AI Agents Edition</h3>
+        <span class="date">Nov. 2024</span>
+        </div>
+        <div class="subtitle">Reply S.p.A.</div>
+        <ul class="description-list">
+        <li>International competition with over 1000 students from top European universities (Polytechnic of Milan and Turin, Sapienza, etc.);</li>
+        <li>Development of innovative projects on AI and emerging technologies;</li>
+        <li>Enhancement of problem solving and interdisciplinary collaboration.</li>
+        </ul>
+        </div>
+        <div class="item">
+        <div class="item-header">
+        <h3>Bloomberg Spreadsheet Analysis</h3>
+        </div>
+        <p>Foundational skills in BQL and its practical application with Excel.</p>
+        </div>
+        </section>
+        
+        <section class="reveal">
+        <h2>Professional Experience</h2>
+        <div class="item">
+        <div class="item-header"><h3>Private tutor of scientific subjects</h3><span class="date">Sep. 2023 - Present</span></div>
+        <ul class="description-list">
+        <li>Assessment of individual needs and explanation of complex concepts;</li>
+        <li>Development of problem-solving strategies and monitoring of progress;</li>
+        <li>Preparation for exams and tests.</li>
+        </ul>
+        </div>
+        </section>
+        
+        <section class="reveal">
+        <h2>Volunteering & Organisations</h2>
+        <div class="item">
+        <div class="item-header"><h3>Nocetum Association</h3><span class="date">2022 - 2024 | Milan, Italy</span></div>
+        <p>During the main holidays I organized the activities, cooked and served for the homeless and women fleeing domestic violence.</p>
+        </div>
+        <div class="item">
+        <div class="item-header"><h3>Blood Donor</h3><span class="date">12/2021 - Present</span></div>
+        </div>
+        </section>
+        </main>
+        </div>
+        
+        <script>
+        document.addEventListener("DOMContentLoaded", function() {
+          const reveals = document.querySelectorAll('.reveal');
+          
+          // Applica la classe di "nascondimento" solo dopo che il JS è partito
+          reveals.forEach(el => el.classList.add('is-hidden'));
+          
+          const observerOptions = { 
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px' 
+          };
+          
+          const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+                entry.target.classList.remove('is-hidden');
+              }
+            });
+          }, observerOptions);
+          
+          reveals.forEach(el => observer.observe(el));
+          
+          // Backup: se non si attiva con lo scroll entro 1 secondo, mostra tutto
+          setTimeout(() => {
+            reveals.forEach(el => {
+              el.classList.add('active');
+              el.classList.remove('is-hidden');
+            });
+          }, 1000);
+        });
+      </script>
+        </body>
+        </html>
