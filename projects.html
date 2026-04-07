@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Giulia Colapinto</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar reveal active">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Giulia<span>.</span></a>
+            <div class="menu-toggle" id="mobile-menu">
+                <span></span><span></span><span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="learning.html">Learning</a></li>
+                <li><a href="projects.html" class="active">Projects</a></li>
+                <li><a href="experience.html">Experience</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <main class="reveal">
+            <h2 class="page-title">Projects</h2>
+            
+            <div class="item-card reveal">
+                <div class="item-header">
+                    <h3>Rice Variety Classification</h3>
+                </div>
+                <div class="subtitle">Tools: R | R Markdown</div>
+                <p class="description-list">A comparative data mining study on Rice Variety Classification using Logistic Regression and K-NN. This project includes data preprocessing, feature normalization, and performance evaluation through ROC curves and F1-metrics.</p>
+                <a href="https://github.com/giuliacolapinto/DataMining_Rice_Analysis" class="project-link" target="_blank">View Project &rarr;</a>
+            </div>
+            
+            <div class="item-card reveal">
+                <div class="item-header">
+                    <h3>Cranial Clusters</h3>
+                </div>
+                <div class="subtitle">Tools: R (tidyverse, Rmixmod, mclust, ggplot2, etc.)</div>
+                <p class="description-list">Implemented Gaussian Mixture Models (GMM) to classify sexual dimorphism, leveraging PCA for feature selection and dimensionality reduction. Through V-Fold Cross-Validation, the system achieved 87% training accuracy, validated via Adjusted Rand Index (ARI).</p>
+                <a href="https://github.com/giuliacolapinto/CranialClusters" class="project-link" target="_blank">View Project &rarr;</a>
+            </div>
+            
+            <div class="item-card reveal">
+                <div class="item-header">
+                    <h3>Data Compression & Optimization</h3>
+                </div>
+                <div class="subtitle">Tools: Python (Pandas, OpenPyXL)</div>
+                <p class="description-list">Designed a progressive compression algorithm: starting with an optimized Run-Length Encoding (RLE) with an alphanumeric mapping to Base 52, progressing to an "Ultra" level by introducing Global Tokenization. Built a custom dictionary to replace recurring patterns through frequency analysis.</p>
+            </div>
+            
+            <div class="item-card reveal">
+                <div class="item-header">
+                    <h3>Labor Market Analytics</h3>
+                </div>
+                <div class="subtitle">Tools: Tableau | R</div>
+                <p class="description-list">Performed a trend analysis of 2019–2023 Italian job ads using R and Tableau. Developed a pipeline to track ESCO skill shifts (digital/transversal) and occupational growth, utilizing data joining and relevance metrics to identify key market drivers.</p>
+                <a href="https://github.com/giuliacolapinto/work_analysis" class="project-link" target="_blank">View Project &rarr;</a>
+            </div>
+            
+        </main>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
