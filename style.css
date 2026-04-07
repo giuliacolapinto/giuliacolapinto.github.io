@@ -326,7 +326,7 @@ main h2.page-title::after {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }
   main { padding: 2rem 1.5rem; }
-  aside { border-radius: 12px; margin-bottom: 2rem; }
+  aside { position: static; border-radius: 12px; margin-bottom: 2rem; }
   .item-header { flex-direction: column; gap: 0.5rem; }
   .date { display: inline-block; }
 }
