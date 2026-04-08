@@ -209,6 +209,22 @@ main h2.page-title::after {
   background: linear-gradient(90deg, var(--accent-color), transparent);
 }
 
+main h3.group-title {
+  color: var(--primary-color);
+  font-size: 1.8rem;
+  margin: 2.5rem 0 1.5rem 0;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+main h3.group-title::after {
+  content: '';
+  flex-grow: 1;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent-color), transparent);
+  opacity: 0.6;
+}
+
 .about-text {
   font-size: 1.15rem;
   background-color: rgba(0, 230, 118, 0.05);
