@@ -92,7 +92,8 @@ a { text-decoration: none; color: inherit; transition: var(--transition); }
   color: var(--primary);
   letter-spacing: -0.5px;
 }
-.nav-logo span { color: var(--accent); }
+.nav-logo .logo-first { color: var(--primary); }
+.nav-logo .logo-last  { color: var(--accent); }
 
 .nav-links {
   display: flex;

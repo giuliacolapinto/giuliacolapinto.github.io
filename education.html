@@ -1,19 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Education | Giulia Colapinto</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <style>
+    .detail-block {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.55s cubic-bezier(0.22, 1, 0.36, 1),
+        opacity 0.4s ease,
+        margin 0.4s ease;
+      opacity: 0;
+      margin-top: 0;
+    }
+
+    .item-card.expanded .detail-block {
+      max-height: 600px;
+      opacity: 1;
+      margin-top: 1.2rem;
+    }
+
+    .expand-toggle {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      margin-top: 1rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--primary);
+      background: var(--accent-soft);
+      border: 1px solid var(--accent-border);
+      padding: 0.45rem 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: var(--transition);
+      user-select: none;
+    }
+
+    .expand-toggle:hover {
+      background: var(--accent);
+      border-color: var(--accent);
+    }
+
+    .expand-toggle .arrow {
+      display: inline-block;
+      transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+      font-style: normal;
+    }
+
+    .item-card.expanded .expand-toggle .arrow {
+      transform: rotate(180deg);
+    }
+
+    .detail-block .detail-intro {
+      font-size: 0.92rem;
+      color: var(--text-main);
+      line-height: 1.75;
+      margin-bottom: 0.75rem;
+    }
+
+    .detail-block .detail-section-title {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 1.4px;
+      color: var(--accent-color, #b8952a);
+      font-weight: 700;
+      margin: 1.2rem 0 0.6rem;
+    }
+
+    .detail-block ul.detail-list {
+      padding-left: 1.2rem;
+      margin: 0;
+      color: var(--text-main);
+      font-size: 0.92rem;
+    }
+
+    .detail-block ul.detail-list li {
+      margin-bottom: 0.55rem;
+      line-height: 1.7;
+    }
+
+    .detail-block ul.detail-list li strong {
+      color: var(--primary);
+    }
+
+    .detail-divider {
+      height: 1px;
+      background: linear-gradient(90deg, var(--accent-border), transparent);
+      margin: 1.2rem 0;
+      border: none;
+    }
+  </style>
 </head>
+
 <body>
 
   <nav class="navbar reveal active">
     <div class="nav-container">
-      <a href="index.html" class="nav-logo">Giulia<span>.</span></a>
+      <a href="index.html" class="nav-logo"><span class="logo-first">Giulia</span> <span
+          class="logo-last">Colapinto</span></a>
       <div class="menu-toggle" id="mobile-menu">
         <span></span><span></span><span></span>
       </div>
@@ -33,7 +126,6 @@
       <h2 class="page-title reveal">Education</h2>
 
       <div class="item-card reveal">
-        <span class="card-num">01</span>
         <div class="item-header">
           <h3>Bachelor's Degree in Statistical and Economic Sciences</h3>
           <span class="date">Sep. 2023 – Jul. 2026</span>
@@ -42,15 +134,17 @@
           <a href="https://en.unimib.it/" target="_blank">University of Milano-Bicocca</a> | Milan, Italy
         </div>
         <ul class="description-list">
-          <li><strong>Statistical Learning &amp; Algorithms:</strong> Statistics (I, II, III), Data Mining, Computational Statistics, Multivariate Statistical Analysis.</li>
-          <li><strong>Data Infrastructure:</strong> Information Systems, Databases, Introduction to Computer Science, Programming Language Laboratory, Data Processing &amp; Analysis.</li>
+          <li><strong>Statistical Learning &amp; Algorithms:</strong> Statistics (I, II, III), Data Mining,
+            Computational Statistics, Multivariate Statistical Analysis.</li>
+          <li><strong>Data Infrastructure:</strong> Information Systems, Databases, Introduction to Computer Science,
+            Programming Language Laboratory, Data Processing &amp; Analysis.</li>
           <li><strong>Mathematical Foundations:</strong> Calculus (I, II), Linear Algebra, Probability.</li>
-          <li><strong>Economics &amp; Finance:</strong> Market Analysis, Corporate Finance, Economics Time Series Analysis, Econometrics.</li>
+          <li><strong>Economics &amp; Finance:</strong> Market Analysis, Corporate Finance, Economics Time Series
+            Analysis, Econometrics.</li>
         </ul>
       </div>
 
       <div class="item-card reveal">
-        <span class="card-num">02</span>
         <div class="item-header">
           <h3>High School Diploma</h3>
           <span class="date">Jul. 2023</span>
@@ -60,22 +154,70 @@
 
       <h2 class="page-title reveal" style="margin-top: 4rem;">Awards &amp; Certificates</h2>
 
-      <div class="item-card reveal">
-        <span class="card-num">★</span>
+      <div class="item-card reveal" id="card-reply">
         <div class="item-header">
           <h3>Winner — Student Tech Class, AI Agents Edition</h3>
           <span class="date">Nov. 2024</span>
         </div>
         <div class="subtitle">Reply S.p.A.</div>
         <ul class="description-list">
-          <li>International competition with over 1,000 students from top European universities (Polytechnic of Milan and Turin, Sapienza, etc.).</li>
+          <li>International competition with over 1,000 students from top European universities (Polytechnic of Milan
+            and Turin, Sapienza, etc.).</li>
           <li>Development of innovative projects on AI and emerging technologies.</li>
           <li>Enhancement of problem solving and interdisciplinary collaboration.</li>
         </ul>
+        <span class="expand-toggle" onclick="toggleCard('card-reply')">
+          Read more <em class="arrow">▾</em>
+        </span>
+
+        <div class="detail-block">
+          <hr class="detail-divider">
+          <p class="detail-intro"><strong>SmartNav</strong> is an innovative AI navigation agent designed to transform driving from a
+            stressful task into a seamless, conversational experience. Unlike traditional GPS systems that require
+            manual input and offer generic routes, SmartNav acts as a proactive co-pilot that listens, learns, and
+            adapts to the driver's specific needs in real-time.</p>
+
+          <div class="detail-section-title">The Core Vision</div>
+          <p class="detail-intro">The project moves away from "static" navigation. The goal is to eliminate the need to stop the car or type
+            on a screen. You communicate with the AI as you would with a passenger, making the journey
+            simpler, safer, and deeply personalized.</p>
+
+          <div class="detail-section-title">Key Conversational Features</div>
+          <ul class="detail-list">
+            <li><strong>Voice-Driven Interaction:</strong> Add stops or change your destination entirely just by
+              speaking. Whether you need to find a supermarket or avoid a specific area, the AI processes your natural
+              language requests instantly.</li>
+            <li><strong>Confidence-Based Routing:</strong> If you don't feel confident at the wheel, tell the AI to
+              avoid difficult junctions or complex intersections. It will find a "calmer" path tailored to your
+              comfort level.</li>
+            <li><strong>Vehicle-Aware Logic:</strong> SmartNav respects the physical limits of your car. For example,
+              if you are driving an SUV, the system will automatically filter out narrow streets where you might get
+              stuck.</li>
+            <li><strong>Real-Time Contextual Safety:</strong> The system monitors external conditions like weather. If
+              there is hail or extreme weather ahead, the AI suggests an alternative route to protect you and your
+              vehicle.</li>
+          </ul>
+
+          <div class="detail-section-title">How It Works</div>
+          <ul class="detail-list">
+            <li><strong>Continuous Learning:</strong> The AI "Brain" trains on your specific habits and preferences
+              every time you interact with it.</li>
+            <li><strong>Dynamic Route Modification:</strong> Based on your "External Requests" (e.g., "I need to buy
+              dinner"), the AI modifies the active route to include the most convenient locations you usually visit.</li>
+            <li><strong>Stress Reduction:</strong> By handling the complexity of the route and reacting to your voice,
+              SmartNav reduces driver distraction and cognitive load.</li>
+          </ul>
+
+          <div class="detail-section-title">Why SmartNav?</div>
+          <p class="detail-intro" style="margin-bottom:0">Standard navigation treats every driver and every car the same way.
+            <strong>SmartNav</strong> recognizes that a driver's preferences, the vehicle's size, and real-time
+            environment are crucial for a successful journey. It is not just a map; it is an intelligent agent that
+            grows with you.
+          </p>
+        </div>
       </div>
 
       <div class="item-card reveal">
-        <span class="card-num">✦</span>
         <div class="item-header">
           <h3>Bloomberg Spreadsheet Analysis</h3>
         </div>
@@ -86,5 +228,11 @@
   </div>
 
   <script src="main.js"></script>
+  <script>
+    function toggleCard(id) {
+      document.getElementById(id).classList.toggle('expanded');
+    }
+  </script>
 </body>
+
 </html>
