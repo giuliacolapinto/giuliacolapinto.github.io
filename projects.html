@@ -102,14 +102,17 @@
     .detail-block ul.detail-list li strong {
       color: var(--primary);
     }
+    .table-wrapper {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      margin-top: 0.75rem;
+    }
     .detail-block .detail-table {
       width: 100%;
       border-collapse: collapse;
       font-size: 0.85rem;
-      margin-top: 0.75rem;
-      display: block;
-      overflow-x: auto;
-      white-space: nowrap;
+      min-width: 400px;
     }
     .detail-block .detail-table th {
       background: var(--accent-soft);
@@ -141,6 +144,7 @@
       background: rgba(26,26,46,0.06);
       padding: 2px 5px;
       border-radius: 4px;
+      word-break: break-all;
     }
     .detail-divider {
       height: 1px;
@@ -238,15 +242,17 @@
           </ul>
 
           <div class="detail-section-title">Performance Comparison</div>
-          <table class="detail-table">
-            <thead><tr><th>Method</th><th>File Size</th><th>Reduction</th><th>Logic</th></tr></thead>
-            <tbody>
-              <tr><td>Original File</td><td>20.1 MB</td><td>—</td><td>Plain Excel</td></tr>
-              <tr><td>Version 1 — RLE</td><td>14.4 MB</td><td>~28%</td><td>Run-Length Encoding</td></tr>
-              <tr><td>Version 2 — Base 52</td><td>13.3 MB</td><td>~34%</td><td>Alpha-Encoding</td></tr>
-              <tr><td>Version 3 — Tokenization</td><td>12.9 MB</td><td>~36%</td><td>Global Pattern Tokens</td></tr>
-            </tbody>
-          </table>
+          <div class="table-wrapper">
+            <table class="detail-table">
+              <thead><tr><th>Method</th><th>File Size</th><th>Reduction</th><th>Logic</th></tr></thead>
+              <tbody>
+                <tr><td>Original File</td><td>20.1 MB</td><td>—</td><td>Plain Excel</td></tr>
+                <tr><td>Version 1 — RLE</td><td>14.4 MB</td><td>~28%</td><td>Run-Length Encoding</td></tr>
+                <tr><td>Version 2 — Base 52</td><td>13.3 MB</td><td>~34%</td><td>Alpha-Encoding</td></tr>
+                <tr><td>Version 3 — Tokenization</td><td>12.9 MB</td><td>~36%</td><td>Global Pattern Tokens</td></tr>
+              </tbody>
+            </table>
+          </div>
 
           <a href="https://github.com/giuliacolapinto/py-storage-optimizer" class="project-link" target="_blank" style="margin-top:1.25rem">View on GitHub →</a>
         </div>
