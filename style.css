@@ -536,6 +536,13 @@ main h3.group-title::after {
   main h2.page-title { font-size: 2.2rem; }
   aside { position: static; margin-bottom: 2rem; }
   .item-header { flex-direction: column; }
+
+  /* shrink decorative card number so it doesn't push content on mobile */
+  .item-card .card-num {
+    font-size: 2.5rem;
+    top: 0.8rem;
+    right: 1rem;
+  }
 }
 
 @media (max-width: 480px) {
