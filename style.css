@@ -549,4 +549,6 @@ main h3.group-title::after {
   .container { padding: 0 1rem; }
   main { padding: 1.5rem 1.25rem; border-radius: 10px; }
   aside { border-radius: 10px; }
+  .item-card { padding: 1.5rem 1.25rem; }
+  .item-card { overflow-wrap: break-word; word-wrap: break-word; hyphens: auto; }
 }
