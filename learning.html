@@ -1,19 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Learning | Giulia Colapinto</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
   <nav class="navbar reveal active">
     <div class="nav-container">
-      <a href="index.html" class="nav-logo"><span class="logo-first">Giulia</span> <span class="logo-last">Colapinto</span></a>
+      <a href="index.html" class="nav-logo"><span class="logo-first">Giulia</span> <span
+          class="logo-last">Colapinto</span></a>
       <div class="menu-toggle" id="mobile-menu">
         <span></span><span></span><span></span>
       </div>
@@ -30,15 +35,116 @@
   <div class="container">
     <main class="reveal">
 
-      <h2 class="page-title reveal">Statistical Learning</h2>
+      <h2 class="page-title reveal">Skills &amp; Competencies</h2>
 
-      <div class="item-card reveal" style="text-align: center; padding: 4rem 2rem;">
-        <div style="font-size: 2.5rem; margin-bottom: 1rem;">🚧</div>
-        <h3 style="font-family: 'DM Serif Display', serif; font-size: 1.6rem; font-weight: 400; color: var(--primary);">Work In Progress</h3>
-        <p style="color: var(--text-muted); margin-top: 1rem; font-size: 1rem; max-width: 480px; margin-inline: auto; line-height: 1.8;">
-          This section will soon contain a catalog of Statistical Learning models, Data Mining algorithms, and evaluation metrics.
-        </p>
-        <p style="margin-top: 2rem; font-weight: 600; color: var(--accent); font-size: 0.9rem; letter-spacing: 0.5px;">Check back soon ✦</p>
+      <div class="item-card reveal">
+        <div class="item-header">
+          <h3>Machine Learning &amp; Data Mining</h3>
+        </div>
+        <ul class="description-list">
+          <li><strong>Supervised Learning:</strong> Logistic Regression, Discriminant Analysis (LDA, QDA), K-Nearest
+            Neighbors (K-NN), Decision Trees (Classification &amp; Regression).</li>
+          <li><strong>Ensemble &amp; Regularization:</strong> Random Forest, XGBoost, Ridge, Lasso.</li>
+          <li><strong>Unsupervised Learning:</strong> K-Means, Hierarchical Clustering (AGNES, DIANA), Gaussian Mixture
+            Models (GMM), Principal Component Analysis (PCA).</li>
+          <li><strong>Model Evaluation &amp; Tuning:</strong> k-fold Cross-Validation, Holdout set, ROC-AUC, Log-loss,
+            F1-score, Gini index, Cross-Entropy. Trade-off Bias/Variance.</li>
+          <li><strong>Explainable AI (XAI):</strong> Model interpretability via Shapley values and Surrogate Decision
+            Trees. White-Box vs Black-Box models.</li>
+        </ul>
+      </div>
+
+      <div class="item-card reveal">
+        <div class="item-header">
+          <h3>Statistical Modelling</h3>
+        </div>
+        <ul class="description-list">
+          <li><strong>Linear Models:</strong> Simple and Multiple Linear Regression (OLS, MLE, Gauss-Markov), Model
+            diagnostics (residuals, leverage, outliers, Cook's distance, multicollinearity), Variable selection
+            (Forward, Backward, Stepwise, AIC, BIC).</li>
+          <li><strong>Generalized Linear Models (GLM):</strong> Binomial/Logistic, Poisson, and Gamma regressions.
+            Iteratively Reweighted Least Squares (IRLS) and Deviance.</li>
+          <li><strong>Advanced Regression:</strong> Quantile Regression, Quasi-Likelihoods (Overdispersion,
+            Beta-Binomial), Generalized Estimating Equations (GEE).</li>
+          <li><strong>Computational Statistics:</strong> Expectation-Maximization (EM) Algorithm, Monte Carlo
+            simulations, Resampling methods (Leave-One-Out, v-fold CV).</li>
+          <li><strong>Statistical Inference:</strong> Point and Interval Estimation, Hypothesis testing (Z, T, F,
+            Chi-square), Neyman-Pearson theory, Likelihood Ratio Test.</li>
+        </ul>
+      </div>
+
+      <div class="item-card reveal">
+        <div class="item-header">
+          <h3>NLP &amp; Text Mining</h3>
+        </div>
+        <ul class="description-list">
+          <li><strong>Text Processing:</strong> Tokenization, Stop words removal, Text representation methods (TF-IDF),
+            Document-Term Matrix construction.</li>
+          <li><strong>Word Embeddings:</strong> Vector representations including Word2Vec.</li>
+          <li><strong>Sentiment Analysis:</strong> Opinion Mining using VADER and Natural Language Processing
+            algorithms.</li>
+          <li><strong>Advanced Techniques:</strong> Introduction to Deep Learning and Recurrent Neural Networks (RNN)
+            for textual data.</li>
+        </ul>
+      </div>
+
+      <div class="item-card reveal">
+        <div class="item-header">
+          <h3>Data Engineering &amp; Databases</h3>
+        </div>
+        <ul class="description-list">
+          <li><strong>Database Design:</strong> Conceptual and logical design (ER Model, Normalization forms 1NF-3NF),
+            ACID transactions.</li>
+          <li><strong>SQL &amp; Relational Databases:</strong> DDL, DML, complex queries, subqueries, grouping, and
+            indexing (MySQL, SQLite).</li>
+          <li><strong>Big Data &amp; BI:</strong> Apache Spark ecosystem, Data Warehousing (Star Schema, Data Cube),
+            OLTP/OLAP systems, Tableau.</li>
+          <li><strong>Data Preprocessing:</strong> Missing data imputation (MCAR, MAR, MNAR, MICE PMM), Imbalanced data
+            handling, Exploratory Data Analysis (EDA).</li>
+        </ul>
+      </div>
+
+      <div class="item-card reveal">
+        <div class="item-header">
+          <h3>Mathematics &amp; Probability</h3>
+        </div>
+        <ul class="description-list">
+          <li><strong>Calculus:</strong> Differential and integral calculus (single and multivariable), Taylor
+            approximation, Ordinary Differential Equations (ODE).</li>
+          <li><strong>Linear Algebra:</strong> Vectors, Matrices, Eigenvalues/Eigenvectors, Spectral decomposition, SVD,
+            Cholesky decomposition.</li>
+          <li><strong>Optimization:</strong> Unconstrained and constrained non-linear optimization (Lagrange
+            multipliers).</li>
+          <li><strong>Probability Theory:</strong> Kolmogorov axioms, Bayes' Theorem, Discrete and continuous random
+            variables, Multivariate distributions.</li>
+          <li><strong>Limit Theorems:</strong> Law of Large Numbers, Central Limit Theorem.</li>
+        </ul>
+      </div>
+
+      <div class="item-card reveal">
+        <div class="item-header">
+          <h3>Econometrics &amp; Time Series</h3>
+        </div>
+        <ul class="description-list">
+          <li><strong>Econometric Models:</strong> OLS, Generalized Least Squares (GLS), Weighted Least Squares (WLS),
+            Instrumental Variables (IV), Simultaneous Equations.</li>
+          <li><strong>Time Series Analysis:</strong> Stationary and non-stationary stochastic processes, Seasonal
+            models, ARIMA/SARIMA models, Exponential Smoothing, Forecasting, and Decomposition.</li>
+        </ul>
+      </div>
+
+      <div class="item-card reveal">
+        <div class="item-header">
+          <h3>Finance &amp; Economics</h3>
+        </div>
+        <ul class="description-list">
+          <li><strong>Micro &amp; Macroeconomics:</strong> Consumer choice, Market structures, Game theory, IS-LM &amp;
+            AS-AD models, Inflation and Unemployment.</li>
+          <li><strong>Economic Statistics:</strong> National Accounting, Input-Output Matrices (IO), Social Accounting
+            Matrices (SAM), Price Indices, Productivity and Inequality (Gini).</li>
+          <li><strong>Corporate Finance:</strong> Investment analysis, Capital structure, Company valuation.</li>
+          <li><strong>Financial Markets:</strong> Financial systems, Central banks, Monetary policy.</li>
+        </ul>
       </div>
 
     </main>
@@ -46,4 +152,5 @@
 
   <script src="main.js"></script>
 </body>
+
 </html>
